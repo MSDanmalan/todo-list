@@ -1,6 +1,6 @@
 @font-face {
     font-family: labelFont;
-    src: url(../fonts/Philosopher/Philosopher-Bold.ttf);
+    src: url(../dist/fonts/Philosopher/Philosopher-Bold.ttf);
 }
 
 html, body {
