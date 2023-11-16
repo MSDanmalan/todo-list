@@ -80,7 +80,7 @@ const createProjects = (function(){
         const projectFolderElement = document.createElement('div')
         projectFolderElement.classList.add('newOptions')
         const projectFolderIcon = document.createElement('img')
-        projectFolderIcon.src = '../icons/circle-small.svg'
+        projectFolderIcon.src = '../dist/icons/circle-small.svg'
         projectFolderIcon.alt = 'folder icon'
         projectFolderIcon.classList.add('projectFolderIcon')
         const projectfolderNameElementElement = document.createElement('p')

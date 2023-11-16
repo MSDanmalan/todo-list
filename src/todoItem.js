@@ -47,13 +47,13 @@ const createTodoitem = (function() {
     thirdTodoDiv.classList.add('thirdTodoDiv')
     const editTodoButtonElement = document.createElement('button')
     const editTodoButtonIcon = document.createElement('img')
-    editTodoButtonIcon.src = "../icons/pencil-outline.svg"
+    editTodoButtonIcon.src = "../dist/icons/pencil-outline.svg"
     editTodoButtonIcon.alt = "edit button"
     editTodoButtonIcon.classList.add('editTodoButtonIcon')
     editTodoButtonElement.appendChild(editTodoButtonIcon)
     const deleteTodoButtonElement = document.createElement('button')
     const deleteTodoButtonIcon = document.createElement('img')
-    deleteTodoButtonIcon.src = "../icons/delete-outline.svg"
+    deleteTodoButtonIcon.src = "../dist/icons/delete-outline.svg"
     deleteTodoButtonIcon.alt = "delete button"
     deleteTodoButtonIcon.classList.add('deleteTodoButtonIcon')
     deleteTodoButtonElement.appendChild(deleteTodoButtonIcon)
