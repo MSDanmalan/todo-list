@@ -1,5 +1,7 @@
 export {createTodoitem, todoItem}
 import { renderTodo } from "./DOM";
+import editTodoIcon from '../dist/icons/pencil-outline.svg'
+import deleteTodoIcon from '../dist/icons/delete-outline.svg'
 
 //Todo factory
 const todoItem = (title, description, dueDate) => {
@@ -47,13 +49,13 @@ const createTodoitem = (function() {
     thirdTodoDiv.classList.add('thirdTodoDiv')
     const editTodoButtonElement = document.createElement('button')
     const editTodoButtonIcon = document.createElement('img')
-    editTodoButtonIcon.src = "../dist/icons/pencil-outline.svg"
+    editTodoButtonIcon.src = editTodoIcon
     editTodoButtonIcon.alt = "edit button"
     editTodoButtonIcon.classList.add('editTodoButtonIcon')
     editTodoButtonElement.appendChild(editTodoButtonIcon)
     const deleteTodoButtonElement = document.createElement('button')
     const deleteTodoButtonIcon = document.createElement('img')
-    deleteTodoButtonIcon.src = "../dist/icons/delete-outline.svg"
+    deleteTodoButtonIcon.src = deleteTodoIcon 
     deleteTodoButtonIcon.alt = "delete button"
     deleteTodoButtonIcon.classList.add('deleteTodoButtonIcon')
     deleteTodoButtonElement.appendChild(deleteTodoButtonIcon)

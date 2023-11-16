@@ -1,6 +1,7 @@
 export { createProjects };
 import { createTodoitem } from "./todoItem";
 import { todoItem } from "./todoItem";
+import FolderIcon from '../dist/icons/circle-small.svg'
 
 const createProjects = (function(){
 
@@ -80,7 +81,7 @@ const createProjects = (function(){
         const projectFolderElement = document.createElement('div')
         projectFolderElement.classList.add('newOptions')
         const projectFolderIcon = document.createElement('img')
-        projectFolderIcon.src = '../dist/icons/circle-small.svg'
+        projectFolderIcon.src = FolderIcon
         projectFolderIcon.alt = 'folder icon'
         projectFolderIcon.classList.add('projectFolderIcon')
         const projectfolderNameElementElement = document.createElement('p')
