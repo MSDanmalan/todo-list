@@ -74,7 +74,6 @@ main {
     display: none;
     height: calc(100vh - 3em);
     width: 45vh;
-    border: 1px solid black;
     flex-direction: column;
     gap: 15px;
     z-index: 2;
@@ -111,7 +110,7 @@ main {
 .options:hover,
 .newOptions:hover {
     cursor: pointer;
-    background-color: aqua;
+    background-color: #dfdfdfa2;
 }
 
 .options > img,
@@ -132,7 +131,7 @@ main {
 
 #addProject:hover {
     cursor: pointer;
-    background-color: aqua;
+    background-color: #dfdfdfa2;
 }
 
 #content .title {
