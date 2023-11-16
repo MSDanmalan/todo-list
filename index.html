@@ -7,6 +7,90 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <script src="main.js"></script>
+    <header>
+        <div class="first-header-div">
+            <button class="menuButton">
+                <img src="../icons/menu.svg" alt="menu button">
+            </button>
+            <button class="homeButton">
+                <img src="../icons/home-outline.svg" alt="home button">
+            </button>
+        </div>
+
+        <div class="second-header-div">
+            <p class="label">Todo list</p>
+        </div>
+        
+        <div class="third-header-div">
+            <button class="favoriteButton">
+                <img src="../icons/star.svg" alt="favorite button">
+            </button><button class="addButton">
+                <img src="../icons/plus.svg" alt="add button">
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="menu">
+            <div class="menuDefault">
+                <div class="options" data-key="Inbox">
+                    <img src="../icons/inbox.svg" alt="Inbox">
+                    <p>Inbox</p>
+                </div>
+                <div class="options" data-key="Today">
+                    <img src="../icons/calendar-today.svg" alt="Today">
+                    <p>Today</p>
+                </div>
+                <div class="options" data-key="Upcoming">
+                    <img src="../icons/calendar-range.svg" alt="Upcoming">
+                    <p>Upcoming</p>
+                </div>
+            </div>
+            <div class="projects">
+                <p>My Projects</p>
+                <div id="addProject">
+                    <img src="../icons/plus.svg" alt="add project">
+                    <p>Add Project</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="content-title"></div>
+            <div id="content"></div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <form action="" method="get" class="addTodoItem">
+            <div class="addTodoDetails">
+                <label for="title"></label>
+                <input type="text" id="title" name="title" placeholder="Title" required maxlength="50">
+            </div>
+            <div class="addTodoDetails">
+                <label for="description"></label>
+                <input type="text" id="description" placeholder="Description" required maxlength="200">
+            </div>
+            <div class="addTodoDetails">
+                <label for="dueDate"></label>
+                <input type="date" id="dueDate" name="dueDate">
+            </div>
+            <div class="addTodoFormButtons">
+                <button type="button" class="cancelButton">cancel</button>
+                <button type="button" class="formAddButton">Add task</button>
+            </div>
+        </form>
+        <form action="" method="get" class="addProjectFolder">
+            <div class="addProjectDetails">
+                <label for="projectTitle"></label>
+                <input type="text" id="projectTitle" name="Project Title" placeholder="Title" required maxlength="50">
+            </div>
+            <div class="addProjectFormButtons">
+                <button type="button" class="projectCancelButton">cancel</button>
+                <button type="button" class="projectFormAddButton">Add Project</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="main.js"></script>
+
 </body>
 </html>
