@@ -1,0 +1,323 @@
+@font-face {
+    font-family: labelFont;
+    src: url(../fonts/Philosopher/Philosopher-Bold.ttf);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+header {
+    background-color: #ef4444;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.first-header-div {
+    display: flex;
+    margin-left: 2em;
+}
+.second-header-div {
+    display: flex;
+}
+
+.third-header-div {
+    display: flex;
+    margin-right: 2em;
+}
+
+button {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button > img {
+    height: 30px;
+    filter: invert(100%) sepia(4%) saturate(7424%) hue-rotate(250deg) brightness(116%) contrast(97%);;
+    transition: transform 0.2s ease; 
+}
+
+
+button > img:hover {
+    transform: scale(1.1);
+}
+
+.favoriteButton {
+/* Gold Color Effect */
+filter: sepia(100%) saturate(8) hue-rotate(30deg) brightness(110%) contrast(90%);
+}
+
+.label {
+    font-family: labelFont;
+    font-size: 2em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+.menu {
+    display: none;
+    height: calc(100vh - 3em);
+    width: 45vh;
+    border: 1px solid black;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2;
+    background-color: white;
+    overflow: auto;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menuDefault {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects p:first-child {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.options,
+.newOptions {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.options:hover,
+.newOptions:hover {
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.options > img,
+.newOptions > img {
+    height: 30px;
+}
+
+#addProject {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+#addProject > img,
+.projectFolderIcon {
+    height: 30px;
+}
+
+#addProject:hover {
+    cursor: pointer;
+    background-color: aqua;
+}
+
+#content .title {
+    padding: 15px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.content-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.content-title {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.folderNameElement {
+    font-weight: 900;
+    font-size: 1.5em;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr;
+    border-top: 1px solid #dfdfdf;
+}
+
+.firstTodoDiv {
+    display: flex;
+    justify-content: end;
+    padding-top: 4px;
+}
+
+.circleCheckbox {
+    position: relative;
+}
+
+.circleCheckbox label {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    border: 2px solid #b84444;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.circleCheckbox label::after {
+    border: 2px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 3px;
+    left: 2px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    transform: rotate(-45deg);
+    width: 8px;
+}
+
+.circleCheckbox input[type=checkbox] {
+    visibility: hidden;
+}
+
+.circleCheckbox input[type=checkbox]:checked + label {
+    background-color: #b84444;
+    border-color: #b84444;
+}
+
+.circleCheckbox input[type=checkbox]:checked + label::after {
+    opacity: 1;
+}
+
+div.secondTodoDiv  > * {
+    padding: 5px;
+}
+
+.thirdTodoDiv {
+    display: flex;
+    justify-content: end;
+}
+
+.editTodoButtonIcon,
+.deleteTodoButtonIcon {
+    filter: invert(100%) saturate(0%) brightness(90%) contrast(80%);
+}
+
+.addTodoItem,
+.addProjectFolder {
+    display: none;
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.3s;
+    z-index: 2;
+    -webkit-box-shadow: 0 0 5px 2px #912929;
+    -moz-box-shadow: 0 0 5px 2px #884242;
+    box-shadow: 0 0 20px 20px #dfdfdf;
+}
+
+.addTodoItem.active,
+.addProjectFolder.active {
+    display: block;
+}
+
+.addTodoItem input,
+.addProjectFolder input {
+    display: grid;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: 1px solid #cbd5e1;
+    background: white;
+    border-radius: 8px;
+}
+
+.addTodoDetails,
+.addProjectDetails {
+    display: flex;
+}
+
+.addTodoItem input:focus
+.addProjectFolder input:focus {
+    background-color: #cbd5e1;
+    outline: none;
+}
+
+.addTodoFormButtons,
+.addProjectFormButtons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.formAddButton, 
+.projectFormAddButton,
+.cancelButton,
+.projectCancelButton {
+    background-color: #ef4444;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-bottom:10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.cancelButton,
+.projectCancelButton {
+    background-color: #cbd5e1;
+}
